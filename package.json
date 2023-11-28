@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clone-repo": "git clone \"https://github.com/brenaSF/oficina-de-integracao.git\"",
     "start-server": "node index.js",
     "cypress:open": "cypress open",
-    "test": "concurrently \"npm:start-server\" \"npm:cypress:open\""
+    "setup-test": "concurrently -c \"auto\" \"npm:clone-repo\" \"npm:start-server\" \"npm:cypress:open\""
   },
   "author": "",
   "license": "ISC",
