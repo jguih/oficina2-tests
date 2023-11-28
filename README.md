@@ -15,7 +15,9 @@ More about NodeJS here: https://nodejs.org/en
 ## How to run this project
 
 1. Run ```npm install``` to install all dependencies
-2. Run ```npm run setup-test``` to configure the project and open cypress
+2. Run ```npm run setup-test-open``` to configure the project and open cypress
+
+Alternatively you can run ```npm run setup-test-run``` to configure the project and run cypress without opening the client
 
 ## About ```npm run setup-test``` script
 
