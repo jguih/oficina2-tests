@@ -2,8 +2,21 @@
 
 This project contains e2e testing for oficina2's web app.
 
+## Prerequisites
+
+This project requires NodeJS and Git to be installed
+
+More about Git here: https://git-scm.com/
+
+More about NodeJS here: https://nodejs.org/en
+
 ## How to run this project
 
-1. Clone the repository https://github.com/brenaSF/Oficina-de-Integracao and put it inside this project's root folder. All the contents of 'oficina-de-integracao' should be inside a folder with the name 'oficina-de-integracao'.
-2. Run ```npm install``` to install all dependencies
-3. Then, to open cypress, run ```npx cypress open```
+1. Run ```npm install``` to install all dependencies
+2. Run ```npm run setup-test``` to configure the project and open cypress
+
+## About ```npm run setup-test``` script
+
+This is a custom script that will start oficina-de-integracao's web application and Cypress client concurrently
+
+Before initiating oficina-de-integracao's web server, NodeJS will try to clone the remote repository and then pull changes automatically
