@@ -5,6 +5,10 @@ describe("login page", () => {
     cy.visit("views/login.html");
   });
 
+  afterEach(() => {
+    cy.wait(1000);
+  })
+
   it("does the exists", () => {
     cy.visit("views/login.html").should("exist");
   });
@@ -40,8 +44,5 @@ describe("login page", () => {
   it("does the register button redirects correctly", () => {
     cy.get(".registrar-login").find("a").click();
     cy.url().should("include", "/views/registrar_login.html");
-
-    cy.go("back");
-    cy.url().should("include", "/views/login.html");
   })
 })

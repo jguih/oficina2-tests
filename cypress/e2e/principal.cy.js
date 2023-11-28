@@ -5,6 +5,10 @@ describe("principal page", () => {
     cy.visit("views/principal.html");
   });
 
+  afterEach(() => {
+    cy.wait(1000);
+  })
+
   it("page should exists", () => {
     cy.visit("views/principal.html").should("exist");
   })
@@ -48,12 +52,10 @@ describe("principal page", () => {
   it("clicking on 'relatórios' should redirect to 'relatórios' page", () => {
     cy.get(".opcoes-termo a").contains("Relatórios").click();
     cy.url().should("contain", "/views/relatorio-voluntario.html");
-    cy.go("back");
   })
 
   it("clicking on 'termo' should redirect to 'termo' page", () => {
     cy.get(".opcoes-termo a").contains("Termo").click();
     cy.url().should("contain", "/views/termo-voluntario.html");
-    cy.go("back");
   })
 });

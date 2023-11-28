@@ -5,6 +5,10 @@ describe("register page", () => {
     cy.visit("/views/registrar_login.html");
   });
 
+  afterEach(() => {
+    cy.wait(1000);
+  })
+
   it("does the page exists", () => {
     cy.visit("/views/registrar_login.html").should("exist");
   });

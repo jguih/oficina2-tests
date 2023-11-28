@@ -6,7 +6,9 @@
   "scripts": {
     "start-server": "node index.js",
     "cypress:open": "cypress open",
-    "setup-test": "concurrently --kill-others -c \"auto\" \"npm:start-server\" \"npm:cypress:open\""
+    "cypress:run": "cypress run",
+    "setup-test-open": "concurrently --kill-others -c \"auto\" \"npm:start-server\" \"npm:cypress:open\"",
+    "setup-test-run": "concurrently --kill-others -c \"auto\" \"npm:start-server\" \"npm:cypress:run\""
   },
   "author": "",
   "license": "ISC",

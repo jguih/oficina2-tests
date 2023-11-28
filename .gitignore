@@ -46,6 +46,9 @@ oficina-de-integracao/
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
+# Cypress videos
+cypress/videos
+
 # TypeScript cache
 *.tsbuildinfo
 
