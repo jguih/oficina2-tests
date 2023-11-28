@@ -2,11 +2,11 @@
 describe("login page", () => {
 
   beforeEach(() => {
-    cy.visit("http://127.0.0.1:8081/views/login.html");
+    cy.visit("views/login.html");
   });
 
   it("exists", () => {
-    cy.visit("http://127.0.0.1:8081/views/login.html").should("exist");
+    cy.visit("views/login.html").should("exist");
   });
 
   it("is user field enabled", () => {

@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js & npx cypress open"
+    "start-server": "node index.js",
+    "cypress:open": "cypress open",
+    "test": "concurrently \"npm:start-server\" \"npm:cypress:open\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "cypress": "^13.6.0"
   },
   "dependencies": {
