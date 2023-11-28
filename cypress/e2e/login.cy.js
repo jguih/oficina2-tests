@@ -5,7 +5,7 @@ describe("login page", () => {
     cy.visit("views/login.html");
   });
 
-  it("exists", () => {
+  it("does the exists", () => {
     cy.visit("views/login.html").should("exist");
   });
 
@@ -13,7 +13,7 @@ describe("login page", () => {
     cy.get("#nome").should("be.enabled");
   })
 
-  it("user field should by typable", () => {
+  it("is user field accepting input", () => {
     cy.get("#nome").type("user@user.com");
     cy.get("#nome").should("contain.value", "user@user.com");
 
@@ -25,7 +25,7 @@ describe("login page", () => {
     cy.get("#senha").should("be.enabled");
   })
 
-  it("password field should by typable", () => {
+  it("is password field accepting input", () => {
     cy.get("#senha").type("test_password");
     cy.get("#senha").should("contain.value", "test_password");
 
