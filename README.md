@@ -1,6 +1,8 @@
 # oficina2-tests
 
-This project contains e2e testing for oficina2's web app.
+This project is a bootstrap of oficina-de-integracao's web app and e2e testing using Cypress
+
+More about Cypress here: https://docs.cypress.io/guides/overview/why-cypress
 
 ## Prerequisites
 
