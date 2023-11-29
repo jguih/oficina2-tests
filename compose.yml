@@ -1,0 +1,21 @@
+services:
+  db:
+    build: ./docker/db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "ellp"
+      POSTGRES_PASSWORD: "ellp"
+      POSTGRES_DB: "ellp-test"
+  back:
+    build: 
+      context: ./oficina-de-integracao/ellp_oficina
+      dockerfile: ../../docker/back/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/ellp-test
+      SPRING_DATASOURCE_USERNAME: ellp
+      SPRING_DATASOURCE_PASSWORD: ellp
+      SPRING_DATASOURCE_DRIVERCLASSNAME: org.postgresql.Driver
+      SPRING_SQL_INIT_CONTINUEONERROR: true
