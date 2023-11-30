@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-server": "node index.js",
+    "init": "npm install && git clone \"https://github.com/brenaSF/oficina-de-integracao.git\"",
+    "app-build": "cd ./oficina-de-integracao/ellp_oficina && .\\mvnw clean package -DskipTests",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "setup-test-open": "concurrently --kill-others -c \"auto\" \"npm:start-server\" \"npm:cypress:open\"",
-    "setup-test-run": "concurrently --kill-others -c \"auto\" \"npm:start-server\" \"npm:cypress:run\""
+    "cypress:run": "cypress run"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +16,6 @@
     "cypress": "^13.6.0"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "shelljs": "^0.8.5"
+
   }
 }
