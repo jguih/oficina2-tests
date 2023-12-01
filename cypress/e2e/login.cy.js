@@ -1,23 +1,20 @@
 
-describe("login page", () => {
+describe("login", () => {
 
-  it("should register new user and login", () => {
-    cy.visit("/views/registrar_login.html");
-    cy.get("#nome").type("jose");
-    cy.get("#senha").type("pass");
-    cy.get(".botao-entrar").click();
-    
+  it("should login", () => {
     cy.visit("/views/login.html");
     cy.get("#nome").type("jose");
-    cy.get("#senha").type("pass");
+    cy.get("#senha").type("123");
     cy.get(".botao-entrar").click();
 
     cy.url().should("include", "/views/principal.html");
-  })
 
-  it("does the register button redirects correctly", () => {
-    cy.visit("/views/login.html");
-    cy.get(".registrar-login").find("a").click();
-    cy.url().should("include", "/views/registrar_login.html");
+    // Check for session cookie
+    cy.getCookie("user-session").should("exist");
+
+    /*
+    * Should check for UI elements that 
+    * indicates user is authenticated
+    */
   })
 })

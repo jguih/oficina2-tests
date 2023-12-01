@@ -19,6 +19,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: ellp
       SPRING_DATASOURCE_DRIVERCLASSNAME: org.postgresql.Driver
       SPRING_SQL_INIT_CONTINUEONERROR: true
+      SPRING_FLYWAY_ENABLED: true
   front:
     build:
       context: ./

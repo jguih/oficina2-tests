@@ -48,6 +48,7 @@ web_modules/
 
 # Cypress videos
 cypress/videos
+cypress/screenshots
 
 # TypeScript cache
 *.tsbuildinfo
